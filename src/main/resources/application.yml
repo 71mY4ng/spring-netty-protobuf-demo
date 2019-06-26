@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: dev
+
+
+---
+
+spring:
+  profiles: dev
+
+public:
+  ftp:
+    map:
+      default:
+        profile-name: normal-ftp
+        host: 192.168.1.1
+        port: 22
+        login: normal
+        password: 12345
+      public-ftp:
+        profile-name: public-ftp
+        host: 192.168.1.2
+        port: 22
+        login: public
+        password: 12345
+  task-conf:
+    create-new-world:
+      base-url: https://www.thefirstday.io
+      ftp-profile: default
+    destroy-a-world:
+      delay: 10000
+      ftp-profile: public-ftp
+---

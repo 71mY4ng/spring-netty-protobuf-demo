@@ -1,0 +1,11 @@
+syntax = "proto3";
+package model;
+
+option java_package = "com.timyang.protobufdemo.model";
+option java_outer_classname = "StudentModel";
+
+message Student{
+  int64 id  = 1;
+  string name = 2;
+  repeated string hobbies = 3;
+}
